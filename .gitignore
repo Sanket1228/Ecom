@@ -1,0 +1,75 @@
+# -------------------------
+# Build and dependency files
+# -------------------------
+/target/
+/build/
+!.mvn/wrapper/maven-wrapper.jar
+.gradle/
+/out/
+
+# -------------------------
+# IntelliJ IDEA
+# -------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# -------------------------
+# Eclipse
+# -------------------------
+.project
+.classpath
+.settings/
+bin/
+
+# -------------------------
+# VS Code
+# -------------------------
+.vscode/
+
+# -------------------------
+# System files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Logs and temp files
+# -------------------------
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+
+# -------------------------
+# Spring Boot specific
+# -------------------------
+# Avoid storing sensitive configs or runtime files
+application-local.properties
+application-dev.properties
+application-prod.properties
+application-test.properties
+.env
+*.db
+
+# -------------------------
+# OS specific
+# -------------------------
+# macOS
+*.DS_Store
+
+# Windows
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# -------------------------
+# Docker (optional)
+# -------------------------
+*.pid
+docker-compose.override.yml
