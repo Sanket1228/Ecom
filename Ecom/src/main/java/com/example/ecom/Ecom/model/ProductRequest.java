@@ -1,43 +1,23 @@
 package com.example.ecom.Ecom.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Entity
+@Data
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Product {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class ProductRequest {
     private String name;
     private String description;
     private BigDecimal price;
     private String category;
     private Date releaseDate;
-    private boolean available;
     private int quantity;
-    private String imageUrl;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private boolean available;
 
     public String getName() {
         return name;
@@ -79,14 +59,6 @@ public class Product {
         this.releaseDate = releaseDate;
     }
 
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
-
     public int getQuantity() {
         return quantity;
     }
@@ -95,13 +67,11 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public boolean isAvailable() {
+        return available;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
-
-
 }
